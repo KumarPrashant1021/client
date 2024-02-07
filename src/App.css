@@ -12,11 +12,11 @@
 .main-container{
     margin-top:20px; 
     display: flex;
-    justify-content: center;
 }
 .image-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .img-card{
     margin: 0.5rem;
