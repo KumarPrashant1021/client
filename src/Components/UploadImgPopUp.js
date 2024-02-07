@@ -14,7 +14,7 @@ export default function UploadImgPopUp({saveImageData}) {
   const handleShow = () => setShow(true);
 
   const handleUpload = ()=>{
-    if(urlRef.current.value == ''){
+    if(urlRef.current.value === ''){
       handleClose()
       return;
     }

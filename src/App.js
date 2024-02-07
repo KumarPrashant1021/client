@@ -20,11 +20,11 @@ export default function App(){
         imageItem
       ]
     })
-  });
+  },[]);
 
   useEffect(()=>{
     localStorage.setItem("images",JSON.stringify(imageDataPresent))
-  },[])
+  },[imageDataPresent])
 
     useEffect(()=>{
         localStorage.setItem("images",JSON.stringify(imageData))
@@ -33,7 +33,7 @@ export default function App(){
 
   return(
     <>
-      
+
       <BrowserRouter>
       <NavBar saveImageData={saveImageData}/>
         <Routes>
