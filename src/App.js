@@ -10,9 +10,7 @@ import {BrowserRouter,Routes,Route} from "react-router-dom"
 
 export default function App(){
   const imageDataPresent = localStorage.getItem('images') ?  JSON.parse(localStorage.getItem('images')) : imagesInfo
-  const [imageData, setImageData] = useState(()=>{
-    return imageDataPresent
-  });
+  const [imageData, setImageData] = useState(imageDataPresent);
   const saveImageData = useCallback((imageItem)=>{
     setImageData((prevImageData)=>{
       return [
@@ -23,13 +21,8 @@ export default function App(){
   },[]);
 
   useEffect(()=>{
-    localStorage.setItem("images",JSON.stringify(imageDataPresent))
-  },[imageDataPresent])
-
-    useEffect(()=>{
-        localStorage.setItem("images",JSON.stringify(imageData))
-       
-    },[imageData])
+      localStorage.setItem("images",JSON.stringify(imageData))
+  },[imageData])
 
   return(
     <>

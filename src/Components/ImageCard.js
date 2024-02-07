@@ -6,7 +6,7 @@ export default function ActionAreaCard({imageInfo}) {
   const navigate = useNavigate();
   return (
     <Card className="img-card" onClick={()=>navigate('/details',{state:imageInfo})}>
-        <Card.Img variant="top"style={{height:'18rem'}} src={imageInfo.url}/>
+        <Card.Img variant="top"style={{height:'18rem'}} src={imageInfo.url} alt={"No Image Found"}/>
         <Card.Body>
         <Card.Title>{imageInfo.title}</Card.Title>
         </Card.Body>
